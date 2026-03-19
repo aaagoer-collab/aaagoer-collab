@@ -2,3 +2,4 @@ public
 resources
 .hugo buuild.lock
 hugo.exe
+.ssh/
