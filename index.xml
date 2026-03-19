@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example 乔</copyright>
-        <lastBuildDate>Tue, 17 Mar 2026 20:43:58 +0800</lastBuildDate><atom:link href="https://aaagoer-collab.github.io/aaagoer-collab/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 19 Mar 2026 23:36:33 +0800</lastBuildDate><atom:link href="https://aaagoer-collab.github.io/aaagoer-collab/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>大力哥</title>
+        <link>https://aaagoer-collab.github.io/aaagoer-collab/p/%E5%A4%A7%E5%8A%9B%E5%93%A5/</link>
+        <pubDate>Thu, 19 Mar 2026 23:36:33 +0800</pubDate>
+        
+        <guid>https://aaagoer-collab.github.io/aaagoer-collab/p/%E5%A4%A7%E5%8A%9B%E5%93%A5/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>第一次用Hugo搭建博客的完整流程</title>
         <link>https://aaagoer-collab.github.io/aaagoer-collab/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/</link>
         <pubDate>Tue, 17 Mar 2026 20:43:58 +0800</pubDate>
