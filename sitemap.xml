@@ -2,82 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/aaagoer-collab/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/</loc>
+    <lastmod>2026-03-19T20:46:20+08:00</lastmod>
+  </url><url>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/p/newnew/</loc>
+    <lastmod>2026-03-19T20:46:20+08:00</lastmod>
+  </url><url>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/post/</loc>
+    <lastmod>2026-03-19T20:46:20+08:00</lastmod>
+  </url><url>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/</loc>
     <lastmod>2026-03-17T20:43:58+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/post/</loc>
-    <lastmod>2026-03-17T20:43:58+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/</loc>
-    <lastmod>2026-03-17T20:43:58+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/categories/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/categories/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/p/test-chinese/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/p/test-chinese/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/categories/test/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/categories/test/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/page/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/archives/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/tags/css/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/tags/html/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/tags/html/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/tags/markdown/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/p/markdown-syntax-guide/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/p/markdown-syntax-guide/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/categories/syntax/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/categories/syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/tags/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/tags/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/tags/themes/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/tags/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/categories/themes/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/categories/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/p/placeholder-text/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/p/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/tags/tag-with-whitespaces/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/tags/tag-with-whitespaces/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/categories/test-with-whitespaces/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/categories/test-with-whitespaces/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/tags/text/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/tags/text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/p/math-typesetting/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/p/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/tags/emoji/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/tags/emoji/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/p/emoji-support/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/p/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/%E5%85%B3%E4%BA%8E/</loc>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/search/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/search/</loc>
   </url><url>
-    <loc>http://localhost:1313/aaagoer-collab/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</loc>
+    <loc>https://aaagoer-collab.github.io/aaagoer-collab/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</loc>
   </url>
 </urlset>
