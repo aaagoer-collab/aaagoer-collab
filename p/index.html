@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Git 常见报错&quot;急救指南&quot; 一、问题：出现奇怪的文件警告 症状：执行 git add 时，提示 warning: in the working copy of '~/.ssh/config'... 或 LF will be replaced by CRLF。 原因： SSH警告：你不小心把电脑的系统配置文件（.ssh）也加进来了，这个不该上传。 换行符警告：Windows系统和Git的换行格式不一样，Git在自动帮你调整，通常无害。 解决： 移除坏文件：输入 git rm --cached -r .ssh，把它从Git的监控名单里踢出去。 无视换行警告：如果只提示 LF/CRLF，直接忽略，继续操作即可，不影响使用。 二、问题：连接超时或无法访问 症状：执行 git push 时，提示 fatal: unable to access ... 或一直卡住不动。 原因：你的远程仓库地址配置错了（比如配成了HTTPS但没设代理），或者名字拼错了（比如把 origin 拼成了 orgin）。 解决： 第一步：输入 git remote -v 检查地址。 第二步：如果看到地址不对或拼写错误，先删掉错的：git remote remove orgin（注意拼写）。 第三步：重新绑定正确的SSH地址：git remote set-url origin git@github.com:你的用户名/你的仓库名.git 三、问题：提示&quot;没什么可提交的&quot; 症状：执行 git commit 时，提示 nothing to commit, working tree clean。">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Git 常见报错“急救指南” 一、问题：出现奇怪的文件警告 症状：执行 git add 时，提示 warning: in the working copy of '～/.ssh/config'... 或 LF will be replaced by CRLF。 原因： SSH警告：你不小心把电脑的系统配置文件（.ssh）也加进来了，这个不该上传。 换行符警告：Windows系统和Git的换行格式不一样，Git在自动帮你调整，通常无害。 解决： 移除坏文件：输入 git rm --cached -r .ssh，把它从Git的监控名单里踢出去。 无视换行警告：如果只提示 LF/CRLF，直接忽略，继续操作即可，不影响使用。 二、问题：连接超时或无法访问 症状：执行 git push 时，提示 fatal: unable to access ... 或一直卡住不动。 原因：你的远程仓库地址配置错了（比如配成了HTTPS但没设代理），或者名字拼错了（比如把 origin 拼成了 orgin）。 解决： 第一步：输入 git remote -v 检查地址。 第二步：如果看到地址不对或拼写错误，先删掉错的：git remote remove orgin（注意拼写）。 第三步：重新绑定正确的SSH地址：git remote set-url origin git@github.com:你的用户名/你的仓库名.git 三、问题：提示“没什么可提交的” 症状：执行 git commit 时，提示 nothing to commit, working tree clean。">
 <title></title>
 
 <link rel='canonical' href='https://aaagoer-collab.github.io/aaagoer-collab/p/'>
 
 <link rel="stylesheet" href="/aaagoer-collab/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="">
-<meta property='og:description' content="Git 常见报错&quot;急救指南&quot; 一、问题：出现奇怪的文件警告 症状：执行 git add 时，提示 warning: in the working copy of '~/.ssh/config'... 或 LF will be replaced by CRLF。 原因： SSH警告：你不小心把电脑的系统配置文件（.ssh）也加进来了，这个不该上传。 换行符警告：Windows系统和Git的换行格式不一样，Git在自动帮你调整，通常无害。 解决： 移除坏文件：输入 git rm --cached -r .ssh，把它从Git的监控名单里踢出去。 无视换行警告：如果只提示 LF/CRLF，直接忽略，继续操作即可，不影响使用。 二、问题：连接超时或无法访问 症状：执行 git push 时，提示 fatal: unable to access ... 或一直卡住不动。 原因：你的远程仓库地址配置错了（比如配成了HTTPS但没设代理），或者名字拼错了（比如把 origin 拼成了 orgin）。 解决： 第一步：输入 git remote -v 检查地址。 第二步：如果看到地址不对或拼写错误，先删掉错的：git remote remove orgin（注意拼写）。 第三步：重新绑定正确的SSH地址：git remote set-url origin git@github.com:你的用户名/你的仓库名.git 三、问题：提示&quot;没什么可提交的&quot; 症状：执行 git commit 时，提示 nothing to commit, working tree clean。">
+<meta property='og:description' content="Git 常见报错“急救指南” 一、问题：出现奇怪的文件警告 症状：执行 git add 时，提示 warning: in the working copy of '～/.ssh/config'... 或 LF will be replaced by CRLF。 原因： SSH警告：你不小心把电脑的系统配置文件（.ssh）也加进来了，这个不该上传。 换行符警告：Windows系统和Git的换行格式不一样，Git在自动帮你调整，通常无害。 解决： 移除坏文件：输入 git rm --cached -r .ssh，把它从Git的监控名单里踢出去。 无视换行警告：如果只提示 LF/CRLF，直接忽略，继续操作即可，不影响使用。 二、问题：连接超时或无法访问 症状：执行 git push 时，提示 fatal: unable to access ... 或一直卡住不动。 原因：你的远程仓库地址配置错了（比如配成了HTTPS但没设代理），或者名字拼错了（比如把 origin 拼成了 orgin）。 解决： 第一步：输入 git remote -v 检查地址。 第二步：如果看到地址不对或拼写错误，先删掉错的：git remote remove orgin（注意拼写）。 第三步：重新绑定正确的SSH地址：git remote set-url origin git@github.com:你的用户名/你的仓库名.git 三、问题：提示“没什么可提交的” 症状：执行 git commit 时，提示 nothing to commit, working tree clean。">
 <meta property='og:url' content='https://aaagoer-collab.github.io/aaagoer-collab/p/'>
 <meta property='og:site_name' content='乔Enkidu'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' />
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="Git 常见报错&quot;急救指南&quot; 一、问题：出现奇怪的文件警告 症状：执行 git add 时，提示 warning: in the working copy of '~/.ssh/config'... 或 LF will be replaced by CRLF。 原因： SSH警告：你不小心把电脑的系统配置文件（.ssh）也加进来了，这个不该上传。 换行符警告：Windows系统和Git的换行格式不一样，Git在自动帮你调整，通常无害。 解决： 移除坏文件：输入 git rm --cached -r .ssh，把它从Git的监控名单里踢出去。 无视换行警告：如果只提示 LF/CRLF，直接忽略，继续操作即可，不影响使用。 二、问题：连接超时或无法访问 症状：执行 git push 时，提示 fatal: unable to access ... 或一直卡住不动。 原因：你的远程仓库地址配置错了（比如配成了HTTPS但没设代理），或者名字拼错了（比如把 origin 拼成了 orgin）。 解决： 第一步：输入 git remote -v 检查地址。 第二步：如果看到地址不对或拼写错误，先删掉错的：git remote remove orgin（注意拼写）。 第三步：重新绑定正确的SSH地址：git remote set-url origin git@github.com:你的用户名/你的仓库名.git 三、问题：提示&quot;没什么可提交的&quot; 症状：执行 git commit 时，提示 nothing to commit, working tree clean。">
+<meta name="twitter:description" content="Git 常见报错“急救指南” 一、问题：出现奇怪的文件警告 症状：执行 git add 时，提示 warning: in the working copy of '～/.ssh/config'... 或 LF will be replaced by CRLF。 原因： SSH警告：你不小心把电脑的系统配置文件（.ssh）也加进来了，这个不该上传。 换行符警告：Windows系统和Git的换行格式不一样，Git在自动帮你调整，通常无害。 解决： 移除坏文件：输入 git rm --cached -r .ssh，把它从Git的监控名单里踢出去。 无视换行警告：如果只提示 LF/CRLF，直接忽略，继续操作即可，不影响使用。 二、问题：连接超时或无法访问 症状：执行 git push 时，提示 fatal: unable to access ... 或一直卡住不动。 原因：你的远程仓库地址配置错了（比如配成了HTTPS但没设代理），或者名字拼错了（比如把 origin 拼成了 orgin）。 解决： 第一步：输入 git remote -v 检查地址。 第二步：如果看到地址不对或拼写错误，先删掉错的：git remote remove orgin（注意拼写）。 第三步：重新绑定正确的SSH地址：git remote set-url origin git@github.com:你的用户名/你的仓库名.git 三、问题：提示“没什么可提交的” 症状：执行 git commit 时，提示 nothing to commit, working tree clean。">
     <link rel="shortcut icon" href="/favicon.ico" />
 
   
@@ -306,7 +306,7 @@ l-800 0 -76 -29 c-90 -33 -166 -78 -281 -164 -45 -35 -143 -109 -216 -165 -74
   <ol>
     <li><a href="#一问题出现奇怪的文件警告">一、问题：出现奇怪的文件警告</a></li>
     <li><a href="#二问题连接超时或无法访问">二、问题：连接超时或无法访问</a></li>
-    <li><a href="#三问题提示没什么可提交的">三、问题：提示&quot;没什么可提交的&quot;</a></li>
+    <li><a href="#三问题提示没什么可提交的">三、问题：提示“没什么可提交的”</a></li>
     <li><a href="#四万能操作口诀">四、万能操作口诀</a></li>
   </ol>
 </nav>
@@ -366,39 +366,36 @@ l-800 0 -76 -29 c-90 -33 -166 -78 -281 -164 -45 -35 -143 -109 -216 -165 -74
     <section class="article-content">
     
     
-    <h1 id="git-常见报错急救指南">Git 常见报错&quot;急救指南&quot;
+    <h1 id="git-常见报错急救指南">Git 常见报错“急救指南”
 </h1><h2 id="一问题出现奇怪的文件警告">一、问题：出现奇怪的文件警告
-</h2><p><strong>症状</strong>：执行 <code>git add</code> 时，提示 <code>warning: in the working copy of '~/.ssh/config'...</code> 或 <code>LF will be replaced by CRLF</code>。</p>
+</h2><p><strong>症状</strong>：执行 <code>git add</code> 时，提示 <code>warning: in the working copy of '～/.ssh/config'...</code> 或 <code>LF will be replaced by CRLF</code>。</p>
 <p><strong>原因</strong>：</p>
 <ul>
-<li><strong>SSH警告</strong>：你不小心把电脑的系统配置文件（<code>.ssh</code>）也加进来了，这个不该上传。</li>
+<li><strong>SSH警告</strong>：你不小心把电脑的系统配置文件（.ssh）也加进来了，这个不该上传。</li>
 <li><strong>换行符警告</strong>：Windows系统和Git的换行格式不一样，Git在自动帮你调整，通常无害。</li>
 </ul>
 <p><strong>解决</strong>：</p>
 <ul>
 <li><strong>移除坏文件</strong>：输入 <code>git rm --cached -r .ssh</code>，把它从Git的监控名单里踢出去。</li>
-<li><strong>无视换行警告</strong>：如果只提示 <code>LF/CRLF</code>，直接忽略，继续操作即可，不影响使用。</li>
+<li><strong>无视换行警告</strong>：如果只提示 LF/CRLF，直接忽略，继续操作即可，不影响使用。</li>
 </ul>
-<hr>
 <h2 id="二问题连接超时或无法访问">二、问题：连接超时或无法访问
 </h2><p><strong>症状</strong>：执行 <code>git push</code> 时，提示 <code>fatal: unable to access ...</code> 或一直卡住不动。</p>
 <p><strong>原因</strong>：你的远程仓库地址配置错了（比如配成了HTTPS但没设代理），或者名字拼错了（比如把 <code>origin</code> 拼成了 <code>orgin</code>）。</p>
 <p><strong>解决</strong>：</p>
-<ul>
+<ol>
 <li><strong>第一步</strong>：输入 <code>git remote -v</code> 检查地址。</li>
 <li><strong>第二步</strong>：如果看到地址不对或拼写错误，先删掉错的：<code>git remote remove orgin</code>（注意拼写）。</li>
 <li><strong>第三步</strong>：重新绑定正确的SSH地址：<code>git remote set-url origin git@github.com:你的用户名/你的仓库名.git</code></li>
-</ul>
-<hr>
-<h2 id="三问题提示没什么可提交的">三、问题：提示&quot;没什么可提交的&quot;
+</ol>
+<h2 id="三问题提示没什么可提交的">三、问题：提示“没什么可提交的”
 </h2><p><strong>症状</strong>：执行 <code>git commit</code> 时，提示 <code>nothing to commit, working tree clean</code>。</p>
 <p><strong>原因</strong>：Git 觉得你当前没有任何新的修改。要么是你改完没保存，要么是刚才已经提交过了。</p>
 <p><strong>解决</strong>：</p>
 <ul>
-<li><strong>检查保存</strong>：确认编辑器里的文件已经按了 <code>Ctrl+S</code>。</li>
+<li><strong>检查保存</strong>：确认编辑器里的文件已经按了 Ctrl+S。</li>
 <li><strong>直接推送</strong>：既然没新东西提交，直接试一下 <code>git push</code>，看看是不是已经同步到线上了。</li>
 </ul>
-<hr>
 <h2 id="四万能操作口诀">四、万能操作口诀
 </h2><p>以后推代码，按这个顺序来，不出错：</p>
 <ol>

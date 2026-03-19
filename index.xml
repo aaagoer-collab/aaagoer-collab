@@ -702,39 +702,36 @@ $$&lt;/p&gt;</description>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://aaagoer-collab.github.io/aaagoer-collab/p/</guid>
-        <description>&lt;h1 id=&#34;git-常见报错急救指南&#34;&gt;Git 常见报错&amp;quot;急救指南&amp;quot;
+        <description>&lt;h1 id=&#34;git-常见报错急救指南&#34;&gt;Git 常见报错“急救指南”
 &lt;/h1&gt;&lt;h2 id=&#34;一问题出现奇怪的文件警告&#34;&gt;一、问题：出现奇怪的文件警告
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：执行 &lt;code&gt;git add&lt;/code&gt; 时，提示 &lt;code&gt;warning: in the working copy of &#39;~/.ssh/config&#39;...&lt;/code&gt; 或 &lt;code&gt;LF will be replaced by CRLF&lt;/code&gt;。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：执行 &lt;code&gt;git add&lt;/code&gt; 时，提示 &lt;code&gt;warning: in the working copy of &#39;～/.ssh/config&#39;...&lt;/code&gt; 或 &lt;code&gt;LF will be replaced by CRLF&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;SSH警告&lt;/strong&gt;：你不小心把电脑的系统配置文件（&lt;code&gt;.ssh&lt;/code&gt;）也加进来了，这个不该上传。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SSH警告&lt;/strong&gt;：你不小心把电脑的系统配置文件（.ssh）也加进来了，这个不该上传。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;换行符警告&lt;/strong&gt;：Windows系统和Git的换行格式不一样，Git在自动帮你调整，通常无害。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;解决&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;移除坏文件&lt;/strong&gt;：输入 &lt;code&gt;git rm --cached -r .ssh&lt;/code&gt;，把它从Git的监控名单里踢出去。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;无视换行警告&lt;/strong&gt;：如果只提示 &lt;code&gt;LF/CRLF&lt;/code&gt;，直接忽略，继续操作即可，不影响使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无视换行警告&lt;/strong&gt;：如果只提示 LF/CRLF，直接忽略，继续操作即可，不影响使用。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;二问题连接超时或无法访问&#34;&gt;二、问题：连接超时或无法访问
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：执行 &lt;code&gt;git push&lt;/code&gt; 时，提示 &lt;code&gt;fatal: unable to access ...&lt;/code&gt; 或一直卡住不动。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：你的远程仓库地址配置错了（比如配成了HTTPS但没设代理），或者名字拼错了（比如把 &lt;code&gt;origin&lt;/code&gt; 拼成了 &lt;code&gt;orgin&lt;/code&gt;）。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解决&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;第一步&lt;/strong&gt;：输入 &lt;code&gt;git remote -v&lt;/code&gt; 检查地址。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;第二步&lt;/strong&gt;：如果看到地址不对或拼写错误，先删掉错的：&lt;code&gt;git remote remove orgin&lt;/code&gt;（注意拼写）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;第三步&lt;/strong&gt;：重新绑定正确的SSH地址：&lt;code&gt;git remote set-url origin git@github.com:你的用户名/你的仓库名.git&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;三问题提示没什么可提交的&#34;&gt;三、问题：提示&amp;quot;没什么可提交的&amp;quot;
+&lt;/ol&gt;
+&lt;h2 id=&#34;三问题提示没什么可提交的&#34;&gt;三、问题：提示“没什么可提交的”
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：执行 &lt;code&gt;git commit&lt;/code&gt; 时，提示 &lt;code&gt;nothing to commit, working tree clean&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：Git 觉得你当前没有任何新的修改。要么是你改完没保存，要么是刚才已经提交过了。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解决&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;检查保存&lt;/strong&gt;：确认编辑器里的文件已经按了 &lt;code&gt;Ctrl+S&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;检查保存&lt;/strong&gt;：确认编辑器里的文件已经按了 Ctrl+S。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;直接推送&lt;/strong&gt;：既然没新东西提交，直接试一下 &lt;code&gt;git push&lt;/code&gt;，看看是不是已经同步到线上了。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;四万能操作口诀&#34;&gt;四、万能操作口诀
 &lt;/h2&gt;&lt;p&gt;以后推代码，按这个顺序来，不出错：&lt;/p&gt;
 &lt;ol&gt;
