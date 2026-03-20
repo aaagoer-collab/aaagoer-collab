@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="目录 GitHub账号注册 Git基础配置 GitHub仓库部署 常见错误及解决方案 GitHub账号注册 步骤一：访问GitHub官网 打开浏览器，访问 https://github.com 点击右上角的 Sign up 按钮 步骤二：填写注册信息 输入邮箱地址：使用有效的电子邮箱（建议使用常用邮箱） 创建密码：至少8位字符，包含字母和数字 设置用户名： 只能包含字母、数字、连字符(-) 不能以连字符开头或结尾 连字符不能连续使用 用户名是唯一的，系统会提示是否可用 步骤三：验证账号 完成人机验证（可能需要识别图片中的物体） 点击 Create account 创建账号 查收验证邮件，点击邮件中的验证链接 步骤四：选择计划 Free（免费版）：适合个人开发者，无限公共仓库和私有仓库 Pro（付费版）：适合专业开发者，包含高级代码审查工具等 一般个人用户选择 Free 计划即可 步骤五：完善个人资料 回答一些关于编程经验的问题（可跳过） 设置个人头像 完善个人简介 Git基础配置 安装Git Windows系统 访问 https://git-scm.com/downloads 下载Windows版本安装包 运行安装程序，保持默认选项即可 安装完成后，在命令行输入验证： 1 git --version macOS系统 1 2 3 4 5 # 使用Homebrew安装 brew install git # 验证安装 git --version Linux系统 1 2 3 4 5 6 7 8 9 # Ubuntu/Debian sudo apt-get update sudo apt-get install git # CentOS/RHEL sudo yum install git # 验证安装 git --version 配置Git用户信息 1 2 3 4 5 6 7 8 9 10 11 # 设置用户名（与GitHub用户名一致） git config --global user.">
+<title>GitHub注册与部署完整教程及常见错误解决方案</title>
+
+<link rel='canonical' href='https://aaagoer-collab.github.io/aaagoer-collab/p/github%E6%B3%A8%E5%86%8C%E4%B8%8E%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/'>
+
+<link rel="stylesheet" href="/aaagoer-collab/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="GitHub注册与部署完整教程及常见错误解决方案">
+<meta property='og:description' content="目录 GitHub账号注册 Git基础配置 GitHub仓库部署 常见错误及解决方案 GitHub账号注册 步骤一：访问GitHub官网 打开浏览器，访问 https://github.com 点击右上角的 Sign up 按钮 步骤二：填写注册信息 输入邮箱地址：使用有效的电子邮箱（建议使用常用邮箱） 创建密码：至少8位字符，包含字母和数字 设置用户名： 只能包含字母、数字、连字符(-) 不能以连字符开头或结尾 连字符不能连续使用 用户名是唯一的，系统会提示是否可用 步骤三：验证账号 完成人机验证（可能需要识别图片中的物体） 点击 Create account 创建账号 查收验证邮件，点击邮件中的验证链接 步骤四：选择计划 Free（免费版）：适合个人开发者，无限公共仓库和私有仓库 Pro（付费版）：适合专业开发者，包含高级代码审查工具等 一般个人用户选择 Free 计划即可 步骤五：完善个人资料 回答一些关于编程经验的问题（可跳过） 设置个人头像 完善个人简介 Git基础配置 安装Git Windows系统 访问 https://git-scm.com/downloads 下载Windows版本安装包 运行安装程序，保持默认选项即可 安装完成后，在命令行输入验证： 1 git --version macOS系统 1 2 3 4 5 # 使用Homebrew安装 brew install git # 验证安装 git --version Linux系统 1 2 3 4 5 6 7 8 9 # Ubuntu/Debian sudo apt-get update sudo apt-get install git # CentOS/RHEL sudo yum install git # 验证安装 git --version 配置Git用户信息 1 2 3 4 5 6 7 8 9 10 11 # 设置用户名（与GitHub用户名一致） git config --global user.">
+<meta property='og:url' content='https://aaagoer-collab.github.io/aaagoer-collab/p/github%E6%B3%A8%E5%86%8C%E4%B8%8E%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/'>
+<meta property='og:site_name' content='乔Enkidu'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='GitHub' /><meta property='article:tag' content='教程' /><meta property='article:tag' content='部署' /><meta property='article:tag' content='Git' /><meta property='article:published_time' content='2026-03-20T12:56:28&#43;08:00'/><meta property='article:modified_time' content='2026-03-20T12:56:28&#43;08:00'/>
+<meta name="twitter:title" content="GitHub注册与部署完整教程及常见错误解决方案">
+<meta name="twitter:description" content="目录 GitHub账号注册 Git基础配置 GitHub仓库部署 常见错误及解决方案 GitHub账号注册 步骤一：访问GitHub官网 打开浏览器，访问 https://github.com 点击右上角的 Sign up 按钮 步骤二：填写注册信息 输入邮箱地址：使用有效的电子邮箱（建议使用常用邮箱） 创建密码：至少8位字符，包含字母和数字 设置用户名： 只能包含字母、数字、连字符(-) 不能以连字符开头或结尾 连字符不能连续使用 用户名是唯一的，系统会提示是否可用 步骤三：验证账号 完成人机验证（可能需要识别图片中的物体） 点击 Create account 创建账号 查收验证邮件，点击邮件中的验证链接 步骤四：选择计划 Free（免费版）：适合个人开发者，无限公共仓库和私有仓库 Pro（付费版）：适合专业开发者，包含高级代码审查工具等 一般个人用户选择 Free 计划即可 步骤五：完善个人资料 回答一些关于编程经验的问题（可跳过） 设置个人头像 完善个人简介 Git基础配置 安装Git Windows系统 访问 https://git-scm.com/downloads 下载Windows版本安装包 运行安装程序，保持默认选项即可 安装完成后，在命令行输入验证： 1 git --version macOS系统 1 2 3 4 5 # 使用Homebrew安装 brew install git # 验证安装 git --version Linux系统 1 2 3 4 5 6 7 8 9 # Ubuntu/Debian sudo apt-get update sudo apt-get install git # CentOS/RHEL sudo yum install git # 验证安装 git --version 配置Git用户信息 1 2 3 4 5 6 7 8 9 10 11 # 设置用户名（与GitHub用户名一致） git config --global user.">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/aaagoer-collab/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/aaagoer-collab/img/avatar_hu15465320411568500637.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😸</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/aaagoer-collab">乔Enkidu</a></h1>
+            <h2 class="site-description">欢迎来到我的网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://ycc77.cn/'
+                        target="_blank"
+                        title="ycc"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1280.000000pt" height="825.000000pt" viewBox="0 0 1280.000000 825.000000"
+ preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0.000000,825.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M2900 8229 c-213 -47 -388 -134 -590 -296 -887 -707 -1798 -2624
+-2160 -4543 -108 -571 -170 -1276 -141 -1595 7 -71 17 -179 22 -240 77 -834
+410 -1369 934 -1504 207 -53 328 -60 494 -27 319 63 590 211 927 508 306 269
+590 595 1099 1258 237 309 358 461 419 528 l39 42 2457 0 2457 0 39 -42 c61
+-67 182 -219 419 -528 438 -571 619 -785 899 -1065 435 -435 753 -631 1146
+-705 147 -28 279 -20 475 31 408 105 710 463 849 1009 52 204 66 298 105 715
+14 137 14 347 2 468 -6 51 -15 164 -21 252 -56 804 -299 1849 -645 2770 -540
+1439 -1255 2509 -1905 2848 -108 57 -199 89 -325 116 -96 20 -123 21 -900 21
+l-800 0 -76 -29 c-90 -33 -166 -78 -281 -164 -45 -35 -143 -109 -216 -165 -74
+-55 -168 -118 -210 -139 l-77 -38 -915 -3 c-1029 -3 -958 -8 -1090 74 -65 40
+-124 83 -340 249 -123 95 -219 153 -307 186 l-78 29 -810 -1 c-751 -1 -816 -3
+-895 -20z m6738 -1251 c64 -24 139 -94 172 -163 35 -72 40 -189 10 -267 -28
+-76 -98 -149 -175 -184 -74 -34 -172 -38 -253 -10 -70 24 -153 100 -189 174
+-24 49 -28 69 -28 142 1 101 21 154 86 225 98 106 234 136 377 83z m-6274
+-140 c3 -13 6 -173 6 -355 l0 -333 344 0 c279 0 346 -3 355 -14 8 -9 11 -82 9
+-242 l-3 -229 -350 -5 -350 -5 -5 -348 c-4 -294 -7 -349 -20 -357 -8 -5 -114
+-10 -236 -10 -173 0 -224 3 -233 13 -7 9 -12 124 -13 358 l-3 344 -350 5 -350
+5 0 240 0 240 353 3 352 2 0 348 c0 192 3 352 7 355 3 4 113 7 244 7 l237 0 6
+-22z m5472 -659 c66 -25 140 -95 174 -164 21 -42 25 -64 25 -145 0 -81 -4
+-103 -24 -145 -100 -202 -361 -254 -526 -104 -32 30 -65 73 -82 107 -24 49
+-28 69 -28 142 1 101 21 154 86 225 98 106 234 137 375 84z m1630 -10 c164
+-78 235 -272 160 -435 -95 -210 -362 -265 -533 -111 -82 74 -124 200 -103 305
+47 225 272 340 476 241z m-805 -807 c107 -52 182 -156 195 -274 15 -130 -68
+-273 -194 -335 -49 -24 -69 -28 -142 -28 -101 0 -154 20 -225 86 -91 84 -129
+207 -101 320 30 117 107 203 216 243 64 23 191 17 251 -12z m-4506 -1287 c355
+-75 587 -434 509 -788 -43 -195 -177 -364 -355 -450 -111 -54 -183 -71 -299
+-70 -298 1 -562 209 -636 503 -22 86 -22 236 1 320 77 292 339 496 640 499 39
+0 101 -6 140 -14z m2763 -1 c242 -48 444 -242 507 -484 22 -85 23 -235 1 -320
+-74 -294 -336 -501 -636 -503 -116 -1 -188 16 -299 70 -178 86 -312 255 -355
+450 -53 241 43 511 234 658 161 124 352 169 548 129z"/>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/aaagoer-collab/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/aaagoer-collab/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/aaagoer-collab/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/aaagoer-collab/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜素</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/aaagoer-collab/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#目录">目录</a></li>
+    <li><a href="#github账号注册">GitHub账号注册</a>
+      <ol>
+        <li><a href="#步骤一访问github官网">步骤一：访问GitHub官网</a></li>
+        <li><a href="#步骤二填写注册信息">步骤二：填写注册信息</a></li>
+        <li><a href="#步骤三验证账号">步骤三：验证账号</a></li>
+        <li><a href="#步骤四选择计划">步骤四：选择计划</a></li>
+        <li><a href="#步骤五完善个人资料">步骤五：完善个人资料</a></li>
+      </ol>
+    </li>
+    <li><a href="#git基础配置">Git基础配置</a>
+      <ol>
+        <li><a href="#安装git">安装Git</a>
+          <ol>
+            <li><a href="#windows系统">Windows系统</a></li>
+            <li><a href="#macos系统">macOS系统</a></li>
+            <li><a href="#linux系统">Linux系统</a></li>
+          </ol>
+        </li>
+        <li><a href="#配置git用户信息">配置Git用户信息</a></li>
+        <li><a href="#配置ssh密钥推荐">配置SSH密钥（推荐）</a>
+          <ol>
+            <li><a href="#添加ssh密钥到ssh代理">添加SSH密钥到SSH代理</a></li>
+            <li><a href="#添加公钥到github">添加公钥到GitHub</a></li>
+            <li><a href="#测试ssh连接">测试SSH连接</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#github仓库部署">GitHub仓库部署</a>
+      <ol>
+        <li><a href="#创建新仓库">创建新仓库</a></li>
+        <li><a href="#本地项目推送到github">本地项目推送到GitHub</a>
+          <ol>
+            <li><a href="#方式一克隆已有仓库">方式一：克隆已有仓库</a></li>
+            <li><a href="#方式二推送本地现有项目">方式二：推送本地现有项目</a></li>
+          </ol>
+        </li>
+        <li><a href="#常用git操作">常用Git操作</a></li>
+        <li><a href="#github-pages部署静态网站">GitHub Pages部署静态网站</a>
+          <ol>
+            <li><a href="#方法一通过仓库设置">方法一：通过仓库设置</a></li>
+            <li><a href="#方法二使用github-actions自动部署">方法二：使用GitHub Actions自动部署</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#常见错误及解决方案">常见错误及解决方案</a>
+      <ol>
+        <li><a href="#1-身份验证错误">1. 身份验证错误</a>
+          <ol>
+            <li><a href="#错误信息">错误信息</a></li>
+            <li><a href="#解决方案">解决方案</a></li>
+          </ol>
+        </li>
+        <li><a href="#2-权限拒绝错误">2. 权限拒绝错误</a>
+          <ol>
+            <li><a href="#错误信息-1">错误信息</a></li>
+            <li><a href="#解决方案-1">解决方案</a></li>
+          </ol>
+        </li>
+        <li><a href="#3-仓库不存在错误">3. 仓库不存在错误</a>
+          <ol>
+            <li><a href="#错误信息-2">错误信息</a></li>
+            <li><a href="#解决方案-2">解决方案</a></li>
+          </ol>
+        </li>
+        <li><a href="#4-推送被拒绝错误">4. 推送被拒绝错误</a>
+          <ol>
+            <li><a href="#错误信息-3">错误信息</a></li>
+            <li><a href="#解决方案-3">解决方案</a></li>
+          </ol>
+        </li>
+        <li><a href="#5-合并冲突">5. 合并冲突</a>
+          <ol>
+            <li><a href="#错误信息-4">错误信息</a></li>
+            <li><a href="#解决方案-4">解决方案</a></li>
+          </ol>
+        </li>
+        <li><a href="#6-大文件推送失败">6. 大文件推送失败</a>
+          <ol>
+            <li><a href="#错误信息-5">错误信息</a></li>
+            <li><a href="#解决方案-5">解决方案</a></li>
+          </ol>
+        </li>
+        <li><a href="#7-邮箱隐私错误">7. 邮箱隐私错误</a>
+          <ol>
+            <li><a href="#错误信息-6">错误信息</a></li>
+            <li><a href="#解决方案-6">解决方案</a></li>
+          </ol>
+        </li>
+        <li><a href="#8-连接超时错误">8. 连接超时错误</a>
+          <ol>
+            <li><a href="#错误信息-7">错误信息</a></li>
+            <li><a href="#解决方案-7">解决方案</a></li>
+          </ol>
+        </li>
+        <li><a href="#9-分支不存在错误">9. 分支不存在错误</a>
+          <ol>
+            <li><a href="#错误信息-8">错误信息</a></li>
+            <li><a href="#解决方案-8">解决方案</a></li>
+          </ol>
+        </li>
+        <li><a href="#10-提交信息错误修改">10. 提交信息错误修改</a>
+          <ol>
+            <li><a href="#修改最后一次提交">修改最后一次提交</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/aaagoer-collab/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" >
+                技术教程
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/aaagoer-collab/p/github%E6%B3%A8%E5%86%8C%E4%B8%8E%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">GitHub注册与部署完整教程及常见错误解决方案</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2026-03-20</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 6 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="目录">目录
+</h2><ol>
+<li><a class="link" href="#github%e8%b4%a6%e5%8f%b7%e6%b3%a8%e5%86%8c" >GitHub账号注册</a></li>
+<li><a class="link" href="#git%e5%9f%ba%e7%a1%80%e9%85%8d%e7%bd%ae" >Git基础配置</a></li>
+<li><a class="link" href="#github%e4%bb%93%e5%ba%93%e9%83%a8%e7%bd%b2" >GitHub仓库部署</a></li>
+<li><a class="link" href="#%e5%b8%b8%e8%a7%81%e9%94%99%e8%af%af%e5%8f%8a%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" >常见错误及解决方案</a></li>
+</ol>
+<hr>
+<h2 id="github账号注册">GitHub账号注册
+</h2><h3 id="步骤一访问github官网">步骤一：访问GitHub官网
+</h3><ol>
+<li>打开浏览器，访问 <a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >https://github.com</a></li>
+<li>点击右上角的 <strong>Sign up</strong> 按钮</li>
+</ol>
+<h3 id="步骤二填写注册信息">步骤二：填写注册信息
+</h3><ol>
+<li><strong>输入邮箱地址</strong>：使用有效的电子邮箱（建议使用常用邮箱）</li>
+<li><strong>创建密码</strong>：至少8位字符，包含字母和数字</li>
+<li><strong>设置用户名</strong>：
+<ul>
+<li>只能包含字母、数字、连字符(-)</li>
+<li>不能以连字符开头或结尾</li>
+<li>连字符不能连续使用</li>
+<li>用户名是唯一的，系统会提示是否可用</li>
+</ul>
+</li>
+</ol>
+<h3 id="步骤三验证账号">步骤三：验证账号
+</h3><ol>
+<li>完成人机验证（可能需要识别图片中的物体）</li>
+<li>点击 <strong>Create account</strong> 创建账号</li>
+<li>查收验证邮件，点击邮件中的验证链接</li>
+</ol>
+<h3 id="步骤四选择计划">步骤四：选择计划
+</h3><ul>
+<li><strong>Free（免费版）</strong>：适合个人开发者，无限公共仓库和私有仓库</li>
+<li><strong>Pro（付费版）</strong>：适合专业开发者，包含高级代码审查工具等</li>
+<li>一般个人用户选择 <strong>Free</strong> 计划即可</li>
+</ul>
+<h3 id="步骤五完善个人资料">步骤五：完善个人资料
+</h3><ol>
+<li>回答一些关于编程经验的问题（可跳过）</li>
+<li>设置个人头像</li>
+<li>完善个人简介</li>
+</ol>
+<hr>
+<h2 id="git基础配置">Git基础配置
+</h2><h3 id="安装git">安装Git
+</h3><h4 id="windows系统">Windows系统
+</h4><ol>
+<li>访问 <a class="link" href="https://git-scm.com/downloads"  target="_blank" rel="noopener"
+    >https://git-scm.com/downloads</a></li>
+<li>下载Windows版本安装包</li>
+<li>运行安装程序，保持默认选项即可</li>
+<li>安装完成后，在命令行输入验证：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git --version
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h4 id="macos系统">macOS系统
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 使用Homebrew安装</span>
+</span></span><span class="line"><span class="cl">brew install git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 验证安装</span>
+</span></span><span class="line"><span class="cl">git --version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="linux系统">Linux系统
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Ubuntu/Debian</span>
+</span></span><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># CentOS/RHEL</span>
+</span></span><span class="line"><span class="cl">sudo yum install git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 验证安装</span>
+</span></span><span class="line"><span class="cl">git --version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="配置git用户信息">配置Git用户信息
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 设置用户名（与GitHub用户名一致）</span>
+</span></span><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;你的GitHub用户名&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置邮箱（与GitHub注册邮箱一致）</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;your.email@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置默认编辑器（可选）</span>
+</span></span><span class="line"><span class="cl">git config --global core.editor <span class="s2">&#34;vim&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看配置信息</span>
+</span></span><span class="line"><span class="cl">git config --list
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="配置ssh密钥推荐">配置SSH密钥（推荐）
+</h3><p>SSH密钥可以实现免密码推送代码，更加安全便捷。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 生成SSH密钥</span>
+</span></span><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;your.email@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果系统不支持ed25519，使用rsa</span>
+</span></span><span class="line"><span class="cl">ssh-keygen -t rsa -b <span class="m">4096</span> -C <span class="s2">&#34;your.email@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 按回车键接受默认文件位置</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 可以设置密码（可选，直接回车表示不设置）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="添加ssh密钥到ssh代理">添加SSH密钥到SSH代理
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 启动ssh-agent</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Windows (Git Bash)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># macOS</span>
+</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Linux</span>
+</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加私钥到ssh-agent</span>
+</span></span><span class="line"><span class="cl">ssh-add ~/.ssh/id_ed25519
+</span></span><span class="line"><span class="cl"><span class="c1"># 或</span>
+</span></span><span class="line"><span class="cl">ssh-add ~/.ssh/id_rsa
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="添加公钥到github">添加公钥到GitHub
+</h4><ol>
+<li>
+<p>复制公钥内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Windows</span>
+</span></span><span class="line"><span class="cl">clip &lt; ~/.ssh/id_ed25519.pub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># macOS</span>
+</span></span><span class="line"><span class="cl">pbcopy &lt; ~/.ssh/id_ed25519.pub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Linux</span>
+</span></span><span class="line"><span class="cl">cat ~/.ssh/id_ed25519.pub
+</span></span><span class="line"><span class="cl"><span class="c1"># 手动复制输出内容</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>登录GitHub，点击右上角头像 → <strong>Settings</strong></p>
+</li>
+<li>
+<p>左侧菜单选择 <strong>SSH and GPG keys</strong></p>
+</li>
+<li>
+<p>点击 <strong>New SSH key</strong></p>
+</li>
+<li>
+<p>填写标题（如：My Laptop），粘贴公钥内容</p>
+</li>
+<li>
+<p>点击 <strong>Add SSH key</strong></p>
+</li>
+</ol>
+<h4 id="测试ssh连接">测试SSH连接
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -T git@github.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 看到以下提示表示成功</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Hi username! You&#39;ve successfully authenticated...</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="github仓库部署">GitHub仓库部署
+</h2><h3 id="创建新仓库">创建新仓库
+</h3><ol>
+<li>登录GitHub，点击右上角 <strong>+</strong> 号 → <strong>New repository</strong></li>
+<li>填写仓库信息：
+<ul>
+<li><strong>Repository name</strong>：仓库名称（建议使用英文）</li>
+<li><strong>Description</strong>：仓库描述（可选）</li>
+<li><strong>Public/Private</strong>：公开或私有</li>
+<li><strong>Initialize this repository with</strong>：
+<ul>
+<li>☑️ Add a README file（推荐勾选）</li>
+<li>☑️ Add .gitignore（根据项目类型选择）</li>
+<li>☑️ Choose a license（可选）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>点击 <strong>Create repository</strong></li>
+</ol>
+<h3 id="本地项目推送到github">本地项目推送到GitHub
+</h3><h4 id="方式一克隆已有仓库">方式一：克隆已有仓库
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 使用HTTPS（需要输入密码）</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/username/repository.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用SSH（推荐，免密码）</span>
+</span></span><span class="line"><span class="cl">git clone git@github.com:username/repository.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入项目目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> repository
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="方式二推送本地现有项目">方式二：推送本地现有项目
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 进入本地项目目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /path/to/your/project
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 初始化Git仓库</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加所有文件到暂存区</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 提交更改</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Initial commit&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加远程仓库（HTTPS方式）</span>
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/username/repository.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 或添加远程仓库（SSH方式，推荐）</span>
+</span></span><span class="line"><span class="cl">git remote add origin git@github.com:username/repository.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 推送到GitHub</span>
+</span></span><span class="line"><span class="cl">git push -u origin main
+</span></span><span class="line"><span class="cl"><span class="c1"># 或如果默认分支是master</span>
+</span></span><span class="line"><span class="cl">git push -u origin master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="常用git操作">常用Git操作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看仓库状态</span>
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看修改内容</span>
+</span></span><span class="line"><span class="cl">git diff
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加指定文件</span>
+</span></span><span class="line"><span class="cl">git add filename.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加所有修改</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 提交更改</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;提交说明&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 推送到远程仓库</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 拉取最新代码</span>
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看提交历史</span>
+</span></span><span class="line"><span class="cl">git log --oneline
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建并切换到新分支</span>
+</span></span><span class="line"><span class="cl">git checkout -b feature-branch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 切换分支</span>
+</span></span><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 合并分支</span>
+</span></span><span class="line"><span class="cl">git merge feature-branch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除本地分支</span>
+</span></span><span class="line"><span class="cl">git branch -d feature-branch
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="github-pages部署静态网站">GitHub Pages部署静态网站
+</h3><p>GitHub Pages可以免费托管静态网站。</p>
+<h4 id="方法一通过仓库设置">方法一：通过仓库设置
+</h4><ol>
+<li>进入仓库页面，点击 <strong>Settings</strong></li>
+<li>左侧选择 <strong>Pages</strong></li>
+<li><strong>Source</strong> 选择 <strong>Deploy from a branch</strong></li>
+<li><strong>Branch</strong> 选择 <strong>main</strong> 或 <strong>master</strong>，文件夹选择 <strong>/(root)</strong> 或 <strong>/docs</strong></li>
+<li>点击 <strong>Save</strong></li>
+<li>等待几分钟，访问 <code>https://username.github.io/repository-name</code></li>
+</ol>
+<h4 id="方法二使用github-actions自动部署">方法二：使用GitHub Actions自动部署
+</h4><ol>
+<li>在项目根目录创建 <code>.github/workflows/deploy.yml</code>：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy to GitHub Pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="l">main ]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">build-and-deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Node.js</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/setup-node@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">node-version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;18&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Install dependencies</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">npm ci</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">npm run build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GITHUB_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./dist</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>提交并推送，GitHub会自动构建并部署</li>
+</ol>
+<hr>
+<h2 id="常见错误及解决方案">常见错误及解决方案
+</h2><h3 id="1-身份验证错误">1. 身份验证错误
+</h3><h4 id="错误信息">错误信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">fatal: Authentication failed for &#39;https://github.com/username/repo.git/&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案">解决方案
+</h4><p><strong>方案A：更新凭据</strong></p>
+<ul>
+<li>Windows：控制面板 → 凭据管理器 → Windows凭据 → 删除github相关凭据</li>
+<li>macOS：<code>git config --global credential.helper osxkeychain</code>，然后重新输入密码</li>
+</ul>
+<p><strong>方案B：使用Personal Access Token</strong></p>
+<ol>
+<li>GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)</li>
+<li>点击 <strong>Generate new token</strong></li>
+<li>选择权限范围（至少勾选 <code>repo</code>）</li>
+<li>生成后复制token，代替密码使用</li>
+</ol>
+<p><strong>方案C：切换到SSH方式</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 修改远程URL为SSH</span>
+</span></span><span class="line"><span class="cl">git remote set-url origin git@github.com:username/repo.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-权限拒绝错误">2. 权限拒绝错误
+</h3><h4 id="错误信息-1">错误信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Permission denied (publickey).
+</span></span><span class="line"><span class="cl">fatal: Could not read from remote repository.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案-1">解决方案
+</h4><ol>
+<li>
+<p>检查SSH密钥是否正确添加：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -T git@github.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如果失败，重新添加密钥：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 启动ssh-agent</span>
+</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加密钥</span>
+</span></span><span class="line"><span class="cl">ssh-add ~/.ssh/id_ed25519
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>确认公钥已添加到GitHub账户</p>
+</li>
+</ol>
+<h3 id="3-仓库不存在错误">3. 仓库不存在错误
+</h3><h4 id="错误信息-2">错误信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">fatal: repository &#39;https://github.com/username/repo.git/&#39; not found
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案-2">解决方案
+</h4><ol>
+<li>检查仓库URL是否正确</li>
+<li>确认仓库是否存在（可能已被删除或设为私有）</li>
+<li>如果是私有仓库，确认有访问权限</li>
+<li>检查网络连接</li>
+</ol>
+<h3 id="4-推送被拒绝错误">4. 推送被拒绝错误
+</h3><h4 id="错误信息-3">错误信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">! [rejected]        main -&gt; main (fetch first)
+</span></span><span class="line"><span class="cl">error: failed to push some refs to &#39;https://github.com/username/repo.git&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案-3">解决方案
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 先拉取远程更新</span>
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果有冲突，解决冲突后重新推送</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者强制推送（会覆盖远程更改，慎用）</span>
+</span></span><span class="line"><span class="cl">git push -f origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-合并冲突">5. 合并冲突
+</h3><h4 id="错误信息-4">错误信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CONFLICT (content): Merge conflict in filename.txt
+</span></span><span class="line"><span class="cl">Automatic merge failed; fix conflicts and then commit the result.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案-4">解决方案
+</h4><ol>
+<li>
+<p>打开冲突文件，查找冲突标记：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+</span></span><span class="line"><span class="cl">本地代码
+</span></span><span class="line"><span class="cl">=======
+</span></span><span class="line"><span class="cl">远程代码
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>编辑文件，保留需要的代码，删除冲突标记</p>
+</li>
+<li>
+<p>标记为已解决并提交：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Resolve merge conflict&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="6-大文件推送失败">6. 大文件推送失败
+</h3><h4 id="错误信息-5">错误信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">remote: error: File largefile.zip is 156.78 MB; this exceeds GitHub&#39;s file size limit of 100.00 MB
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案-5">解决方案
+</h4><p><strong>方案A：使用Git LFS（大文件存储）</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 安装Git LFS</span>
+</span></span><span class="line"><span class="cl">git lfs install
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 追踪大文件</span>
+</span></span><span class="line"><span class="cl">git lfs track <span class="s2">&#34;*.zip&#34;</span>
+</span></span><span class="line"><span class="cl">git lfs track <span class="s2">&#34;*.psd&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 提交.gitattributes</span>
+</span></span><span class="line"><span class="cl">git add .gitattributes
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Track large files with LFS&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 重新添加大文件并推送</span>
+</span></span><span class="line"><span class="cl">git add largefile.zip
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Add large file&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>方案B：从提交历史中删除大文件</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 使用BFG Repo-Cleaner或filter-branch</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 参考GitHub文档：https://docs.github.com/en/repositories/working-with-files/managing-large-files</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="7-邮箱隐私错误">7. 邮箱隐私错误
+</h3><h4 id="错误信息-6">错误信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">remote: error: GH007: Your push would publish private email addresses.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案-6">解决方案
+</h4><ol>
+<li>GitHub → Settings → Emails</li>
+<li>取消勾选 <strong>Keep my email addresses private</strong></li>
+<li>或使用GitHub提供的noreply邮箱：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;username@users.noreply.github.com&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="8-连接超时错误">8. 连接超时错误
+</h3><h4 id="错误信息-7">错误信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">fatal: unable to access &#39;https://github.com/...&#39;: Failed to connect to github.com port 443: Timed out
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案-7">解决方案
+</h4><p><strong>方案A：配置代理</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 设置HTTP代理</span>
+</span></span><span class="line"><span class="cl">git config --global http.proxy http://proxy.example.com:8080
+</span></span><span class="line"><span class="cl">git config --global https.proxy https://proxy.example.com:8080
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 取消代理</span>
+</span></span><span class="line"><span class="cl">git config --global --unset http.proxy
+</span></span><span class="line"><span class="cl">git config --global --unset https.proxy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>方案B：使用SSH方式</strong>
+SSH连接通常比HTTPS更稳定</p>
+<p><strong>方案C：修改hosts文件</strong>
+查找GitHub的最新IP地址并添加到hosts文件</p>
+<h3 id="9-分支不存在错误">9. 分支不存在错误
+</h3><h4 id="错误信息-8">错误信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">error: pathspec &#39;main&#39; did not match any file(s) known to git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解决方案-8">解决方案
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看所有分支</span>
+</span></span><span class="line"><span class="cl">git branch -a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建并切换到新分支</span>
+</span></span><span class="line"><span class="cl">git checkout -b main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 或从远程拉取分支</span>
+</span></span><span class="line"><span class="cl">git fetch origin
+</span></span><span class="line"><span class="cl">git checkout -b main origin/main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="10-提交信息错误修改">10. 提交信息错误修改
+</h3><h4 id="修改最后一次提交">修改最后一次提交
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 修改提交信息</span>
+</span></span><span class="line"><span class="cl">git commit --amend -m <span class="s2">&#34;新的提交信息&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改提交内容（添加遗漏的文件）</span>
+</span></span><span class="line"><span class="cl">git add forgotten-file.txt
+</span></span><span class="line"><span class="cl">git commit --amend --no-edit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 强制推送到远程（如果已推送）</span>
+</span></span><span class="line"><span class="cl">git push --force-with-lease origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="总结">总结
+</h2><p>GitHub是全球最大的代码托管平台，掌握其注册和部署流程对开发者至关重要。本文涵盖了：</p>
+<ol>
+<li><strong>注册流程</strong>：从账号创建到邮箱验证</li>
+<li><strong>Git配置</strong>：安装、用户信息设置、SSH密钥配置</li>
+<li><strong>部署方法</strong>：仓库创建、代码推送、GitHub Pages部署</li>
+<li><strong>常见问题</strong>：10种常见错误及详细解决方案</li>
+</ol>
+<p>建议新手：</p>
+<ul>
+<li>优先使用SSH方式连接，避免反复输入密码</li>
+<li>养成经常commit和push的习惯</li>
+<li>遇到问题时仔细阅读错误信息</li>
+<li>善用GitHub官方文档和社区资源</li>
+</ul>
+<hr>
+<p><strong>参考资源</strong></p>
+<ul>
+<li><a class="link" href="https://docs.github.com/"  target="_blank" rel="noopener"
+    >GitHub官方文档</a></li>
+<li><a class="link" href="https://git-scm.com/doc"  target="_blank" rel="noopener"
+    >Git官方文档</a></li>
+<li><a class="link" href="https://guides.github.com/"  target="_blank" rel="noopener"
+    >GitHub Guides</a></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/aaagoer-collab/tags/github/">GitHub</a>
+        
+            <a href="/aaagoer-collab/tags/%E6%95%99%E7%A8%8B/">教程</a>
+        
+            <a href="/aaagoer-collab/tags/%E9%83%A8%E7%BD%B2/">部署</a>
+        
+            <a href="/aaagoer-collab/tags/git/">Git</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 Example 乔
+    </section>
+    
+    <section class="powerby">
+        
+            454673919 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/aaagoer-collab/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

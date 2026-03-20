@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pposts on 乔Enkidu</title>
+        <link>https://aaagoer-collab.github.io/aaagoer-collab/ppost/</link>
+        <description>Recent content in Pposts on 乔Enkidu</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example 乔</copyright>
+        <lastBuildDate>Fri, 20 Mar 2026 12:52:16 +0800</lastBuildDate><atom:link href="https://aaagoer-collab.github.io/aaagoer-collab/ppost/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>New</title>
+        <link>https://aaagoer-collab.github.io/aaagoer-collab/ppost/new/</link>
+        <pubDate>Fri, 20 Mar 2026 12:52:16 +0800</pubDate>
+        
+        <guid>https://aaagoer-collab.github.io/aaagoer-collab/ppost/new/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
