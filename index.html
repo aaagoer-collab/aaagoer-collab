@@ -727,6 +727,24 @@ l-800 0 -76 -29 c-90 -33 -166 -78 -281 -164 -45 -35 -143 -109 -216 -165 -74
 })
 
 
+pjax._handleResponse = pjax.handleResponse;
+
+pjax.handleResponse = function(responseText, request, href, options) {
+  if (request.responseText.match("<html")) {  
+                let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+                
+                let bodyClass = newDom.body.className;
+                document.body.setAttribute("class", bodyClass)
+                
+    pjax._handleResponse(responseText, request, href, options);
+  } else {
+    
+  }
+}
+
+document.addEventListener('pjax:complete', () => {
+   window.Stack.init();
+});
 
 
    </script>

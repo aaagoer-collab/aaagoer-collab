@@ -1618,6 +1618,24 @@ SSH连接通常比HTTPS更稳定</p>
 })
 
 
+pjax._handleResponse = pjax.handleResponse;
+
+pjax.handleResponse = function(responseText, request, href, options) {
+  if (request.responseText.match("<html")) {  
+                let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+                
+                let bodyClass = newDom.body.className;
+                document.body.setAttribute("class", bodyClass)
+                
+    pjax._handleResponse(responseText, request, href, options);
+  } else {
+    
+  }
+}
+
+document.addEventListener('pjax:complete', () => {
+   window.Stack.init();
+});
 
 
    </script>
