@@ -1636,6 +1636,8 @@ SSH连接通常比HTTPS更稳定</p>
     window.Stack.init();
   });
 </script>
+
+
 <script>
     
     const cssPath = "https://aaagoer-collab.github.io/aaagoer-collab/waifu/waifu.css"
@@ -1678,6 +1680,57 @@ SSH连接通常比HTTPS更稳定</p>
             });
         });
     }
+</script><style> 
+    #backTopBtn { 
+        display: none; 
+        position: fixed; 
+        bottom: 100px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        z-index: 99; 
+        cursor: pointer; 
+        width: 30px; 
+        height: 30px; 
+        background-image: url(https://aaagoer-collab.github.io/aaagoer-collab/icons/backTop.svg); 
+        background-size: contain; 
+        background-repeat: no-repeat; 
+        background-position: center; 
+    } 
+</style> 
+
+
+<script> 
+    
+ 
+    function initScrollTop() { 
+        
+        let btn = document.getElementById("backTopBtn");
+        if (!btn) {
+            btn = document.createElement("div"); 
+            btn.id = "backTopBtn"; 
+            btn.onclick = backToTop;
+            document.body.appendChild(btn);
+        }
+        
+        window.addEventListener('scroll', function() { 
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { 
+                btn.style.display = "block"; 
+            } else { 
+                btn.style.display = "none"; 
+            } 
+        }); 
+    } 
+
+
+    
+ 
+    function backToTop(){ 
+        window.scrollTo({ top: 0, behavior: "smooth" }) 
+    } 
+
+
+    initScrollTop(); 
 </script>
 
     </body>
