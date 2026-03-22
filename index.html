@@ -708,6 +708,7 @@ l-800 0 -76 -29 c-90 -33 -166 -78 -281 -164 -45 -35 -143 -109 -216 -165 -74
     }());
 </script>
 
+
  
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
@@ -721,34 +722,72 @@ l-800 0 -76 -29 c-90 -33 -166 -78 -281 -164 -45 -35 -143 -109 -216 -165 -74
 <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
 
 <script>
-   var pjax = new Pjax({
-  
-  selectors: [".main-container"]
-})
+  var pjax = new Pjax({
+    selectors: [".main-container"]
+  });
 
+  pjax._handleResponse = pjax.handleResponse;
 
-pjax._handleResponse = pjax.handleResponse;
+  pjax.handleResponse = function(responseText, request, href, options) {
+    if (request.responseText.match("<html")) {  
+      let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+      
+      let bodyClass = newDom.body.className;
+      document.body.setAttribute("class", bodyClass);
+      
+      pjax._handleResponse(responseText, request, href, options);
+    } else {
+      
+    }
+  };
 
-pjax.handleResponse = function(responseText, request, href, options) {
-  if (request.responseText.match("<html")) {  
-                let newDom = new DOMParser().parseFromString(responseText, 'text/html');
-                
-                let bodyClass = newDom.body.className;
-                document.body.setAttribute("class", bodyClass)
-                
-    pjax._handleResponse(responseText, request, href, options);
-  } else {
+  document.addEventListener('pjax:complete', () => {
+    window.Stack.init();
+  });
+</script>
+<script>
     
-  }
-}
+    const cssPath = "https://aaagoer-collab.github.io/aaagoer-collab/waifu/waifu.css"
+    
+    const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
 
-document.addEventListener('pjax:complete', () => {
-   window.Stack.init();
-});
+    
+    function loadExternalResource(url, type) {
+        return new Promise((resolve, reject) => {
+            let tag;
+            if (type === "css") {
+                tag = document.createElement("link");
+                tag.rel = "stylesheet";
+                tag.href = url;
+            }
+            else if (type === "js") {
+                tag = document.createElement("script");
+                tag.src = url;
+            }
+            if (tag) {
+                tag.onload = () => resolve(url);
+                tag.onerror = () => reject(url);
+                document.head.appendChild(tag);
+            }
+        });
+    }
 
-
-   </script>
-   
+    
+    if (screen.width >= 768) {
+        Promise.all([
+            loadExternalResource(cssPath, "css"),
+            loadExternalResource(live2d_path + "live2d.min.js", "js"),
+            loadExternalResource(live2d_path + "waifu-tips.js", "js")
+        ]).then(() => {
+            
+            initWidget({
+                waifuPath: live2d_path + "waifu-tips.json",
+                cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+                tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
+            });
+        });
+    }
+</script>
 
     </body>
 </html>
